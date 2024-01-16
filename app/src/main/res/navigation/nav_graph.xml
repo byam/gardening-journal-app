@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.gardeningjournalapp.HomeFragment"
+        android:label="fragment_home_fragment"
+        tools:layout="@layout/fragment_home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_splash1Fragment"
+            app:destination="@id/splash1Fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/splash1Fragment"
+        android:name="com.example.gardeningjournalapp.Splash1Fragment"
+        android:label="fragment_splash1"
+        tools:layout="@layout/fragment_splash1" >
+        <action
+            android:id="@+id/action_splash1Fragment_to_homeFragment"
+            app:destination="@id/homeFragment"/>
+        <argument
+            android:name="pname"
+            app:argType="string" />
+        <argument
+            android:name="page"
+            app:argType="integer" />
+    </fragment>
+</navigation>

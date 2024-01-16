@@ -1,0 +1,45 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/teal_200"
+    tools:context=".Splash1Fragment">
+    <TextView
+        android:id="@+id/tvSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:textColor="@color/design_default_color_error"
+        android:text="Splash Screen" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvName"
+        android:textSize="30sp"
+        android:textColor="@color/purple_500"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+    <TextView
+        android:id="@+id/tvAge"
+        android:textSize="30sp"
+        android:textColor="@color/purple_500"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="32dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/home"
+        android:textAllCaps="false"
+        android:textSize="30sp"
+        android:text="Home"/>
+</LinearLayout>
