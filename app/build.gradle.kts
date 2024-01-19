@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("androidx.navigation.safeargs")
+    id("kotlin-kapt")
 }
 
 android {
@@ -83,4 +84,14 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+
+    val roomVersion = "2.6.1"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion") // Use kapt instead of annotationProcessor
+
+//    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$roomVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
 }
