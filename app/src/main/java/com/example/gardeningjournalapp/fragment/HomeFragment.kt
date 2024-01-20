@@ -25,7 +25,7 @@ class HomeFragment : Fragment() {
             btnSend.setOnClickListener {
                 // home -> splash
                 val directions =
-                    com.example.gardeningjournalapp.HomeFragmentDirections.actionHomeFragmentToSplash1Fragment(
+                    HomeFragmentDirections.actionHomeFragmentToSplash1Fragment(
                         etName.text.toString(),
                         etAge.text.toString().toInt()
                     )

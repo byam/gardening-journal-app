@@ -53,7 +53,7 @@ class HomeFrag : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         binding.buttonAdd.setOnClickListener {
-            val action = com.example.gardeningjournalapp.ui.HomeFragDirections.actionAddNote()
+            val action = HomeFragDirections.actionAddNote()
             Navigation.findNavController(it).navigate(action)
         }
 

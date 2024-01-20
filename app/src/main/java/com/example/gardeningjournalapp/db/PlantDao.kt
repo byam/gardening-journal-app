@@ -11,8 +11,8 @@ import androidx.room.Update
 interface PlantDao {
     @Query("SELECT * FROM plants")
     fun getAll(): LiveData<List<Plant>>
-    @Query("SELECT * FROM plants WHERE id = :plantId")
-    suspend fun getById(plantId: Int): LiveData<Plant>
+//    @Query("SELECT * FROM plants WHERE id = :plantId")
+//    suspend fun getById(plantId: Int): LiveData<Plant>
     @Insert
     suspend fun insert(plant: Plant)
     @Update
@@ -23,4 +23,6 @@ interface PlantDao {
     suspend fun deleteAll()
     @Query("DELETE FROM plants WHERE id = :plantId")
     suspend fun deleteById(plantId: Int)
+    @Query("SELECT COUNT(*) FROM plants")
+    suspend fun getCount(): Int
 }

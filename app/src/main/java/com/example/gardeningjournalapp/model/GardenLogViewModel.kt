@@ -29,6 +29,19 @@ class GardenLogViewModel(application: Application): AndroidViewModel(application
         repository.delete(plant)
     }
 
+    fun initializeSampleDataIfEmpty() = viewModelScope.launch {
+        if (repository.isDatabaseEmpty()) {
+            val samplePlants = listOf(
+                Plant(name = "Rose", type = "Flower", wateringFrequency = 2, plantingDate = "2023-01-01"),
+                Plant(name = "Tomato", type = "Vegetable", wateringFrequency = 3, plantingDate = "2023-02-15"),
+                Plant(name = "Basil", type = "Herb", wateringFrequency = 1, plantingDate = "2023-03-10")
+            )
+            for (plant in samplePlants) {
+                insert(plant)
+            }
+        }
+    }
+
 //    fun getById(plantId: Int) = viewModelScope.launch {
 //        return repository.getById(plantId)
 //    }

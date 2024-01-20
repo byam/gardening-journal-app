@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_garden">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_garden"
+    app:startDestination="@id/gardenHomeFragment2">
 
+    <fragment
+        android:id="@+id/gardenHomeFragment2"
+        android:name="com.example.gardeningjournalapp.fragment.GardenHomeFragment"
+        android:label="fragment_garden_home"
+        tools:layout="@layout/fragment_garden_home" >
+        <action
+            android:id="@+id/action_gardenHomeFragment_to_gardenLogFragment"
+            app:destination="@id/gardenLogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gardenLogFragment"
+        android:name="com.example.gardeningjournalapp.fragment.GardenLogFragment"
+        android:label="fragment_garden_log"
+        tools:layout="@layout/fragment_garden_log" />
 </navigation>

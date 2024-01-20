@@ -78,8 +78,7 @@ class AddNoteFrag : Fragment() {
             setPositiveButton("Yes") {dialog, which ->
                 lifecycleScope.launch {
                     NoteDatabase(context).getNoteDao().deleteNote(note!!)
-                    val action =
-                        com.example.gardeningjournalapp.ui.AddNoteFragDirections.actionSaveNote()
+                    val action = AddNoteFragDirections.actionSaveNote()
                     Navigation.findNavController(requireView()).navigate(action)
                 }
             }

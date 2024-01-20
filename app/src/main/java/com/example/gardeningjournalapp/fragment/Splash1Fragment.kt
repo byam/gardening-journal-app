@@ -17,7 +17,7 @@ import com.example.gardeningjournalapp.databinding.FragmentSplash1Binding
  */
 class Splash1Fragment : Fragment() {
     private lateinit var binding: FragmentSplash1Binding
-    private val nargs: com.example.gardeningjournalapp.Splash1FragmentArgs by navArgs()
+    private val nargs: Splash1FragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
