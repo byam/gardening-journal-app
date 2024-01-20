@@ -1,4 +1,4 @@
-package com.example.gardeningjournalapp.ui
+package com.example.gardeningjournalapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

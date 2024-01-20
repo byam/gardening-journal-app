@@ -1,4 +1,4 @@
-package com.example.gardeningjournalapp.ui
+package com.example.gardeningjournalapp.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,11 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.gardeningjournalapp.databinding.FragHomeBinding
 import com.example.gardeningjournalapp.db.NoteDatabase
-import com.example.gardeningjournalapp.ui.adapter.NotesAdapter
+import com.example.gardeningjournalapp.adapter.NotesAdapter
 import kotlinx.coroutines.launch
 
 /**
@@ -54,7 +53,7 @@ class HomeFrag : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         binding.buttonAdd.setOnClickListener {
-            val action = HomeFragDirections.actionAddNote()
+            val action = com.example.gardeningjournalapp.ui.HomeFragDirections.actionAddNote()
             Navigation.findNavController(it).navigate(action)
         }
 

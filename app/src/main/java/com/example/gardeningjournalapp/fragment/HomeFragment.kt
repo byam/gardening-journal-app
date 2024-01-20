@@ -1,4 +1,4 @@
-package com.example.gardeningjournalapp
+package com.example.gardeningjournalapp.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -24,10 +24,11 @@ class HomeFragment : Fragment() {
         binding.apply {
             btnSend.setOnClickListener {
                 // home -> splash
-                val directions = HomeFragmentDirections.actionHomeFragmentToSplash1Fragment(
-                    etName.text.toString(),
-                    etAge.text.toString().toInt()
-                )
+                val directions =
+                    com.example.gardeningjournalapp.HomeFragmentDirections.actionHomeFragmentToSplash1Fragment(
+                        etName.text.toString(),
+                        etAge.text.toString().toInt()
+                    )
                 findNavController().navigate(directions)
             }
         }

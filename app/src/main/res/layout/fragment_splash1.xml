@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/teal_200"
-    tools:context=".Splash1Fragment">
+    tools:context=".fragment.Splash1Fragment">
     <TextView
         android:id="@+id/tvSplash"
         android:layout_width="wrap_content"

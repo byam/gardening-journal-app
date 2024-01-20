@@ -1,4 +1,4 @@
-package com.example.gardeningjournalapp.ui.adapter
+package com.example.gardeningjournalapp.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

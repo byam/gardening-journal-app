@@ -1,4 +1,4 @@
-package com.example.gardeningjournalapp
+package com.example.gardeningjournalapp.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.gardeningjournalapp.R
 import com.example.gardeningjournalapp.databinding.FragmentSplash1Binding
 
 /**
@@ -16,7 +17,7 @@ import com.example.gardeningjournalapp.databinding.FragmentSplash1Binding
  */
 class Splash1Fragment : Fragment() {
     private lateinit var binding: FragmentSplash1Binding
-    private val nargs: Splash1FragmentArgs by navArgs()
+    private val nargs: com.example.gardeningjournalapp.Splash1FragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -1,4 +1,4 @@
-package com.example.gardeningjournalapp.ui
+package com.example.gardeningjournalapp.fragment
 
 import android.app.AlertDialog
 import android.os.Bundle
@@ -78,7 +78,8 @@ class AddNoteFrag : Fragment() {
             setPositiveButton("Yes") {dialog, which ->
                 lifecycleScope.launch {
                     NoteDatabase(context).getNoteDao().deleteNote(note!!)
-                    val action = AddNoteFragDirections.actionSaveNote()
+                    val action =
+                        com.example.gardeningjournalapp.ui.AddNoteFragDirections.actionSaveNote()
                     Navigation.findNavController(requireView()).navigate(action)
                 }
             }
