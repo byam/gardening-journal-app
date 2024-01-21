@@ -28,7 +28,10 @@ class PlantRepository(application: Application) {
     suspend fun isDatabaseEmpty(): Boolean {
         return plantDao.getCount() == 0
     }
-//    suspend fun getById(plantId: Int): LiveData<Plant> {
-//        return plantDao.getById(plantId)
-//    }
+    fun getById(plantId: Int): LiveData<Plant> {
+        return plantDao.getById(plantId)
+    }
+    suspend fun deleteById(plantId: Int){
+        plantDao.deleteById(plantId)
+    }
 }

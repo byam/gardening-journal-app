@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_gardenLogFragment_to_gardenAddPlantFragment"
             app:destination="@id/gardenAddPlantFragment" />
+        <action
+            android:id="@+id/action_gardenLogFragment_to_gardenPlantDetailsFragment"
+            app:destination="@id/gardenPlantDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/gardenAddPlantFragment"
@@ -31,5 +34,17 @@
         <action
             android:id="@+id/action_gardenAddPlantFragment_to_gardenLogFragment"
             app:destination="@id/gardenLogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gardenPlantDetailsFragment"
+        android:name="com.example.gardeningjournalapp.fragment.GardenPlantDetailsFragment"
+        android:label="fragment_garden_plant_details"
+        tools:layout="@layout/fragment_garden_plant_details" >
+        <action
+            android:id="@+id/action_gardenPlantDetailsFragment_to_gardenLogFragment"
+            app:destination="@id/gardenLogFragment" />
+        <argument
+            android:name="plantId"
+            app:argType="integer" />
     </fragment>
 </navigation>

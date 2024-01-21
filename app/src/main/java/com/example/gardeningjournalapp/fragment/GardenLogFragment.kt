@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.gardeningjournalapp.adapter.GardensAdapter
 import com.example.gardeningjournalapp.databinding.FragmentGardenLogBinding
@@ -36,7 +37,11 @@ class GardenLogFragment : Fragment() {
         }
         // Fetch all plants
         plantViewModel.plants.observe(viewLifecycleOwner) { plants ->
-            binding.recyclerViewPlants.adapter = GardensAdapter(plants)
+            binding.recyclerViewPlants.adapter = GardensAdapter(plants) { plant ->
+                // Handle click here. Navigate to the details fragment
+                val action = GardenLogFragmentDirections.actionGardenLogFragmentToGardenPlantDetailsFragment(plant.id)
+                findNavController().navigate(action)
+            }
         }
 
         // Add plant

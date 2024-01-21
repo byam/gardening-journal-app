@@ -42,7 +42,11 @@ class GardenLogViewModel(application: Application): AndroidViewModel(application
         }
     }
 
-//    fun getById(plantId: Int) = viewModelScope.launch {
-//        return repository.getById(plantId)
-//    }
+    fun getPlantById(plantId: Int): LiveData<Plant> {
+        return repository.getById(plantId)
+    }
+
+    fun deleteById(plantId: Int) = viewModelScope.launch {
+        repository.deleteById(plantId)
+    }
 }
