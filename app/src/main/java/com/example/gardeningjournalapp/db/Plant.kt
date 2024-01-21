@@ -12,4 +12,3 @@ data class Plant(
     val wateringFrequency: Int,
     val plantingDate: String,
 )
-

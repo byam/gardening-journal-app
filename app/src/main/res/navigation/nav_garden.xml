@@ -18,5 +18,18 @@
         android:id="@+id/gardenLogFragment"
         android:name="com.example.gardeningjournalapp.fragment.GardenLogFragment"
         android:label="fragment_garden_log"
-        tools:layout="@layout/fragment_garden_log" />
+        tools:layout="@layout/fragment_garden_log" >
+        <action
+            android:id="@+id/action_gardenLogFragment_to_gardenAddPlantFragment"
+            app:destination="@id/gardenAddPlantFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gardenAddPlantFragment"
+        android:name="com.example.gardeningjournalapp.fragment.GardenAddPlantFragment"
+        android:label="fragment_garden_add_plant"
+        tools:layout="@layout/fragment_garden_add_plant" >
+        <action
+            android:id="@+id/action_gardenAddPlantFragment_to_gardenLogFragment"
+            app:destination="@id/gardenLogFragment" />
+    </fragment>
 </navigation>
